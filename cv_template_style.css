@@ -1,3 +1,4 @@
+
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
 	border:0;
 	font:inherit;
@@ -115,6 +116,8 @@ p {
 section {
 	border-top: 1px solid #dedede;
 	padding: 20px 0 0;
+	overflow: hidden;	
+	word-wrap: break-word;	
 }
 
 section:first-child {
@@ -168,13 +171,17 @@ section:last-child {
 
 .executiveSummary {
   	list-style-type: disc;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	font-size: 1em;
 	color: #444;
 	list-style-position: inside;
 	text-indent: -1.5em;
 	padding-left: 1em;
  	margin-left: 10px;
+}
+
+.executiveSummary li {
+  	margin:0 0 6px 0;
 }
 
 .publications {
@@ -184,7 +191,7 @@ section:last-child {
 }
 
 .publications li {
-  	margin:0 0 5px 0;
+  	margin:0 0 6px 0;
 }
 
 .publications ul, ol {
@@ -234,25 +241,17 @@ section:last-child {
 	box-sizing: border-box;
 }
 
-/*--------------FLEX GRID RESPONSIVE ELEMENTS-------------*/
-@media screen and (max-width: 1200px) {
-	.box {
-		width: 40%;
-	}
-}
 
-@media screen and (max-width: 600px) {
-	.box {
-		width: 90%;
-	}
-}
-
-/*--------------ALL OTHER RESPONSIVE ELEMENTS-------------*/
+/*--------------RESPONSIVE ELEMENTS-------------*/
 @media all and (min-width: 602px) and (max-width: 800px) {
 	.keySkills {
 	-moz-column-count:1;
 	-webkit-column-count:1;
 	column-count:1;
+	}
+
+  .box {
+		width: 90%;
 	}
 
 }
@@ -264,10 +263,14 @@ section:last-child {
 		min-width: 280px;
 	}
 	
+  .box {
+		width: 90%;
+	}
+  
 	#name, #contactDetails {
 		float: none;
 		width: 100%;
-		text-align: center;
+		text-align: left;
 	}
 	
 	.sectionTitle {
@@ -275,6 +278,11 @@ section:last-child {
 		font-size: 1.25em;
 	}
 	
+	.sectionTitle, .sectionContent, .publications, .container {
+		float: none;
+		width: 100%;
+	}
+
 	.keySkills {
 		-moz-column-count:1;
 		-webkit-column-count:1;
@@ -296,7 +304,10 @@ section:last-child {
 		padding: 0 25px;
 	}
 
-	
+  .box {
+		width: 90%;
+	}
+  
 	.keySkills {
 	-moz-column-count:1;
 	-webkit-column-count:1;
